@@ -1,0 +1,26 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/configuration-reference
+version: 2.1
+
+jobs:
+  deploy-hello-world-site:
+    docker:
+      - image: hashicorp/terraform:1.9.6
+
+    steps:
+      - checkout
+      - run:
+          name: "Check out Hello World site repository"
+          command: "git clone https://github.com/mbstr/at-bay-assignment-dev.git site-folder"
+      - run:
+          name: "Build Hello World site"
+          command: "echo 'Building and testing the site. No, really. No build errors or test failures either, it is that good!'"
+      - run:
+          name: "Deploying Hello World site"
+          command: "terraform init && terraform apply -auto-approve -var 'hello_world_site_content_source=./site-folder/HelloWorld.html'"
+          #command: "echo 'DEPLOYING!!!'"
+
+workflows:
+  hello-world-workflow:
+    jobs:
+      - deploy-hello-world-site

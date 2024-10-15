@@ -11,6 +11,4 @@ terraform {
 
 provider "aws" {
   region     = var.hello_world_deployment_region
-  access_key = var.aws_account_access_key
-  secret_key = var.aws_account_secret_key
 }
