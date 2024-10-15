@@ -14,7 +14,7 @@ jobs:
           command: "git clone https://github.com/mbstr/at-bay-assignment-dev.git site-folder"
       - run:
           name: "Build Hello World site"
-          command: "echo 'Building and testing the site. No, really. No build errors or test failures either, it's that good!'"
+          command: "echo 'Building and testing the site. No, really. No build errors or test failures either, it is that good!'"
       - run:
           name: "Deploying Hello World site"
           command: "terraform apply -var 'hello_world_site_content_source=./site-folder/HelloWorld.html'"
