@@ -17,8 +17,8 @@ jobs:
           command: "echo 'Building and testing the site. No, really. No build errors or test failures either, it is that good!'"
       - run:
           name: "Deploying Hello World site"
-          command: "echo 'DEPLOYING!!!'"
-          #command: "terraform init && terraform apply -auto-approve -var 'hello_world_site_content_source=./site-folder/HelloWorld.html'"
+          command: "terraform init && terraform apply -auto-approve -var 'hello_world_site_content_source=./site-folder/HelloWorld.html'"
+          #command: "echo 'DEPLOYING!!!'"
 
 workflows:
   hello-world-workflow:
