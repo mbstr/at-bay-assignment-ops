@@ -1,15 +1,3 @@
-variable "aws_account_access_key" {
-  description = "AWS account access key"
-  type        = string
-  nullable    = false
-}
-
-variable "aws_account_secret_key" {
-  description = "AWS account secret key"
-  type        = string
-  nullable    = false
-}
-
 variable "hello_world_deployment_region" {
   description = "AWS region where Hello World website is deployed."
   type        = string
